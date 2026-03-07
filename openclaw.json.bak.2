@@ -1,13 +1,173 @@
 {
-  "wizard": {
-    "lastRunAt": "2026-03-07T09:55:20.181Z",
-    "lastRunVersion": "2026.3.2",
-    "lastRunCommand": "onboard",
-    "lastRunMode": "local"
+  "meta": {
+    "lastTouchedVersion": "2026.3.2",
+    "lastTouchedAt": "2026-03-07T13:01:37.069Z"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "bailian": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-sp-5bb4f22366184a0f8cd98e0b34d768ee",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.5-plus",
+            "name": "qwen3.5-plus",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-max-2026-01-23",
+            "name": "qwen3-max-2026-01-23",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-coder-next",
+            "name": "qwen3-coder-next",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-coder-plus",
+            "name": "qwen3-coder-plus",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax-M2.5",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          },
+          {
+            "id": "glm-5",
+            "name": "glm-5",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 202752,
+            "maxTokens": 16384
+          },
+          {
+            "id": "glm-4.7",
+            "name": "glm-4.7",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 202752,
+            "maxTokens": 16384
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "kimi-k2.5",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
   },
   "agents": {
     "defaults": {
-      "workspace": "/Users/guruocen/.openclaw/workspace",
+      "model": {
+        "primary": "bailian/glm-5"
+      },
+      "models": {
+        "bailian/qwen3.5-plus": {},
+        "bailian/qwen3-max-2026-01-23": {},
+        "bailian/qwen3-coder-next": {},
+        "bailian/qwen3-coder-plus": {},
+        "bailian/MiniMax-M2.5": {},
+        "bailian/glm-5": {},
+        "bailian/glm-4.7": {},
+        "bailian/kimi-k2.5": {}
+      },
       "compaction": {
         "mode": "safeguard"
       },
@@ -17,47 +177,29 @@
       }
     }
   },
-  "tools": {
-    "profile": "messaging"
-  },
-  "messages": {
-    "ackReactionScope": "group-mentions"
-  },
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
     "restart": true,
     "ownerDisplay": "raw"
   },
-  "session": {
-    "dmScope": "per-channel-peer"
-  },
-  "gateway": {
-    "port": 18789,
-    "mode": "local",
-    "bind": "loopback",
-    "auth": {
-      "mode": "token",
-      "token": "f93a4dc7d617c3387cb875e04a9b1e640d29bb47824e978b"
-    },
-    "tailscale": {
-      "mode": "off",
-      "resetOnExit": false
-    },
-    "nodes": {
-      "denyCommands": [
-        "camera.snap",
-        "camera.clip",
-        "screen.record",
-        "contacts.add",
-        "calendar.add",
-        "reminders.add",
-        "sms.send"
-      ]
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8669875133:AAFwD1yebdomJr8PEZp3ijMlSHzSzosqpOw",
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
     }
   },
-  "meta": {
-    "lastTouchedVersion": "2026.3.2",
-    "lastTouchedAt": "2026-03-07T09:55:20.193Z"
+  "gateway": {
+    "mode": "local"
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
   }
 }

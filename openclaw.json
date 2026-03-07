@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.2",
-    "lastTouchedAt": "2026-03-07T10:36:42.781Z"
+    "lastTouchedAt": "2026-03-07T13:43:30.628Z"
   },
   "models": {
     "mode": "merge",
@@ -168,6 +168,9 @@
         "bailian/glm-4.7": {},
         "bailian/kimi-k2.5": {}
       },
+      "compaction": {
+        "mode": "safeguard"
+      },
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
@@ -180,7 +183,26 @@
     "restart": true,
     "ownerDisplay": "raw"
   },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8669875133:AAFwD1yebdomJr8PEZp3ijMlSHzSzosqpOw",
+      "allowFrom": [
+        "8369187343"
+      ],
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
   "gateway": {
     "mode": "local"
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
   }
 }

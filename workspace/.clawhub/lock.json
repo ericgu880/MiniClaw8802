@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "self-improving-agent": {
+      "version": "1.0.11",
+      "installedAt": 1772892003606
+    },
+    "obsidian-cli-official": {
+      "version": "4.0.2",
+      "installedAt": 1772894102314
+    },
+    "qmd": {
+      "version": "1.0.0",
+      "installedAt": 1772894171911
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1772894223076
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1772894585274
+    },
+    "memory-setup": {
+      "version": "1.0.0",
+      "installedAt": 1772894706251
+    }
+  }
+}
