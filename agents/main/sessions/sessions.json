@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "2a36f92f-215d-49d8-bc22-deee74fbf719",
-    "updatedAt": 1772882289143,
+    "updatedAt": 1772883919630,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -76,7 +76,7 @@
     "contextTokens": 202752,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1772882259948,
+      "generatedAt": 1772883824585,
       "sessionId": "2a36f92f-215d-49d8-bc22-deee74fbf719",
       "sessionKey": "agent:main:main",
       "provider": "bailian",
@@ -89,9 +89,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 28224,
+        "chars": 28214,
         "projectContextChars": 16126,
-        "nonProjectContextChars": 12098
+        "nonProjectContextChars": 12088
       },
       "injectedWorkspaceFiles": [
         {
@@ -305,11 +305,11 @@
         ]
       }
     },
-    "inputTokens": 364,
-    "outputTokens": 441,
-    "cacheRead": 55423,
+    "inputTokens": 54832,
+    "outputTokens": 683,
+    "cacheRead": 62271,
     "cacheWrite": 0,
-    "totalTokens": 55787,
+    "totalTokens": 62494,
     "totalTokensFresh": true
   }
 }
