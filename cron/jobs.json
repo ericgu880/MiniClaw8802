@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "bc1cfccc-d200-40f8-90d7-391aed8e5dbb",
+      "name": "nightly-security-audit",
+      "description": "每晚安全巡检",
+      "enabled": true,
+      "createdAtMs": 1772881679808,
+      "updatedAtMs": 1772881679808,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute this command and output the result as-is, no extra commentary: bash ~/.openclaw/workspace/scripts/nightly-security-audit.sh",
+        "thinking": "off",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "8369187343"
+      },
+      "state": {
+        "nextRunAtMs": 1772910000000
+      }
+    },
+    {
+      "id": "bc5d65a0-22de-45ed-b673-5bbd6eab4387",
+      "name": "nightly-security-audit",
+      "description": "每晚安全巡检",
+      "enabled": true,
+      "createdAtMs": 1772881734392,
+      "updatedAtMs": 1772881734392,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Execute this command and output the result as-is, no extra commentary: bash ~/.openclaw/workspace/scripts/nightly-security-audit.sh",
+        "thinking": "off",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "8369187343"
+      },
+      "state": {
+        "nextRunAtMs": 1772910000000
+      }
+    }
+  ]
+}

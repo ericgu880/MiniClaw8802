@@ -1,0 +1,18 @@
+# OpenClaw 灾备排除项
+
+# 临时文件
+devices/*.tmp
+*.bak
+*.tmp
+
+# 媒体文件（体积大）
+media/
+
+# 运行日志（可重建）
+logs/
+
+# Shell 补全（可重建）
+completions/
+
+# 静态资源（可重建）
+canvas/
