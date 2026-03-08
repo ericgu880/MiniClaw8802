@@ -270,7 +270,7 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 | 权限收窄 | ✅ 已部署 | openclaw.json/paired.json chmod 600 |
 | 哈希基线 | ✅ 已部署 | SHA256 基线已生成 |
 | 夜间巡检 | ✅ 已部署 | Cron Job 每日 03:00 CST |
-| Git 灾备 | ✅ 已修复 | 已清理历史提交中的 token，force push 成功 |
+| Git 灾备 | ✅ 已修复 | 已彻底排除 sessions 目录，force push 成功 |
 | 巡检脚本保护 | ⚠️ macOS限制 | chattr +i 不可用，使用 chmod 600 替代 |
 
 **部署日期**: 2026-03-09
