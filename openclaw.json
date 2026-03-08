@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.2",
-    "lastTouchedAt": "2026-03-07T13:43:30.628Z"
+    "lastTouchedAt": "2026-03-08T04:58:56.926Z"
   },
   "models": {
     "mode": "merge",
@@ -156,7 +156,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "bailian/glm-5"
+        "primary": "bailian/kimi-k2.5"
       },
       "models": {
         "bailian/qwen3.5-plus": {},
@@ -196,7 +196,11 @@
     }
   },
   "gateway": {
-    "mode": "local"
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "claw-browser-relay-2026"
+    }
   },
   "plugins": {
     "entries": {

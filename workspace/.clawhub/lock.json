@@ -24,6 +24,22 @@
     "memory-setup": {
       "version": "1.0.0",
       "installedAt": 1772894706251
+    },
+    "self-improving": {
+      "version": "1.2.10",
+      "installedAt": 1772946497657
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1772954227405
+    },
+    "tavily-search": {
+      "version": "1.0.0",
+      "installedAt": 1772955725633
+    },
+    "xhs": {
+      "version": "1.2.5",
+      "installedAt": 1772970059926
     }
   }
 }
