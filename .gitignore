@@ -12,3 +12,7 @@ canvas/
 *.gif
 *.webp
 agents/*/sessions/*.jsonl.reset.*
+
+# Additional security exclusions
+agents/*/sessions/*.jsonl
+agents/*/sessions/*.jsonl.*
