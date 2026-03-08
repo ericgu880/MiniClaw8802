@@ -2,12 +2,12 @@
   "version": 1,
   "jobs": [
     {
-      "id": "bc1cfccc-d200-40f8-90d7-391aed8e5dbb",
+      "id": "nightly-security-audit-v27",
       "name": "nightly-security-audit",
-      "description": "每晚安全巡检",
+      "description": "每晚安全巡检 - SlowMist v2.7",
       "enabled": true,
-      "createdAtMs": 1772881679808,
-      "updatedAtMs": 1772910152125,
+      "createdAtMs": 1773082800000,
+      "updatedAtMs": 1773082800000,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -27,52 +27,14 @@
         "to": "8369187343"
       },
       "state": {
-        "nextRunAtMs": 1772996400000,
-        "lastRunAtMs": 1772910000013,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 152112,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "runningAtMs": 1772997306887
-      }
-    },
-    {
-      "id": "bc5d65a0-22de-45ed-b673-5bbd6eab4387",
-      "name": "nightly-security-audit",
-      "description": "每晚安全巡检",
-      "enabled": true,
-      "createdAtMs": 1772881734392,
-      "updatedAtMs": 1772910290662,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Asia/Shanghai"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Execute this command and output the result as-is, no extra commentary: bash ~/.openclaw/workspace/scripts/nightly-security-audit.sh",
-        "thinking": "off",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "telegram",
-        "to": "8369187343"
-      },
-      "state": {
-        "nextRunAtMs": 1772996400000,
-        "lastRunAtMs": 1772910152125,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 138537,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "runningAtMs": 1772997306887
+        "nextRunAtMs": 1773169200000,
+        "lastRunAtMs": 0,
+        "lastRunStatus": "pending",
+        "lastStatus": "pending",
+        "lastDurationMs": 0,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "pending",
+        "consecutiveErrors": 0
       }
     }
   ]

@@ -259,3 +259,19 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 5. 向人类汇报审计结果，**等待确认后**才可使用
 
 **未通过安全审计的 Skill/MCP 等不得使用。**
+
+---
+
+## 🛡️ 防御矩阵部署状态 (v2.7)
+
+| 组件 | 状态 | 备注 |
+|:---|:---|:---|
+| 红线/黄线规则 | ✅ 已部署 | 写入 AGENTS.md |
+| 权限收窄 | ✅ 已部署 | openclaw.json/paired.json chmod 600 |
+| 哈希基线 | ✅ 已部署 | SHA256 基线已生成 |
+| 夜间巡检 | ✅ 已部署 | Cron Job 每日 03:00 CST |
+| Git 灾备 | ✅ 已部署 | 自动推送至私有仓库 |
+| 巡检脚本保护 | ✅ 已部署 | chattr +i 锁定 |
+
+**部署日期**: 2026-03-09
+**指南版本**: SlowMist OpenClaw Security Practice Guide v2.7
