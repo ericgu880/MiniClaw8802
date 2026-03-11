@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "097f0148-281f-4b27-a844-333533ee750f",
-    "updatedAt": 1773103817277,
+    "updatedAt": 1773190120307,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -213,7 +213,7 @@
     "model": "kimi-k2.5",
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1773103806251,
+      "generatedAt": 1773190101885,
       "sessionId": "097f0148-281f-4b27-a844-333533ee750f",
       "sessionKey": "agent:main:main",
       "provider": "bailian",
@@ -502,15 +502,15 @@
         ]
       }
     },
-    "cacheRead": 0,
+    "cacheRead": 22528,
     "cacheWrite": 0,
     "totalTokensFresh": true,
     "lastTo": "telegram:8369187343",
     "lastAccountId": "default",
     "contextTokens": 262144,
-    "inputTokens": 26166,
-    "outputTokens": 316,
-    "totalTokens": 26166
+    "inputTokens": 51901,
+    "outputTokens": 284,
+    "totalTokens": 39861
   },
   "agent:main:cron:bc1cfccc-d200-40f8-90d7-391aed8e5dbb": {
     "sessionId": "e99b1011-460f-4e98-a4fc-ad316e5939d8",
@@ -805,8 +805,8 @@
     "cacheWrite": 0
   },
   "agent:main:cron:nightly-security-audit-v27": {
-    "sessionId": "f13fd8c5-25f8-4744-bc0d-f7471c3e19d2",
-    "updatedAt": 1773169200097,
+    "sessionId": "ca887c5d-d122-40fa-a320-26021494b182",
+    "updatedAt": 1773255600019,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -997,7 +997,14 @@
       "version": 0
     },
     "modelProvider": "bailian",
-    "model": "kimi-k2.5"
+    "model": "kimi-k2.5",
+    "contextTokens": 262144,
+    "inputTokens": 64572,
+    "outputTokens": 416,
+    "totalTokens": 13310,
+    "totalTokensFresh": true,
+    "cacheRead": 256,
+    "cacheWrite": 0
   },
   "agent:main:cron:nightly-security-audit-v27:run:f13fd8c5-25f8-4744-bc0d-f7471c3e19d2": {
     "sessionId": "f13fd8c5-25f8-4744-bc0d-f7471c3e19d2",
@@ -1192,6 +1199,215 @@
       "version": 0
     },
     "modelProvider": "bailian",
-    "model": "kimi-k2.5"
+    "model": "kimi-k2.5",
+    "contextTokens": 262144,
+    "inputTokens": 64572,
+    "outputTokens": 416,
+    "totalTokens": 13310,
+    "totalTokensFresh": true,
+    "cacheRead": 256,
+    "cacheWrite": 0
+  },
+  "agent:main:cron:nightly-security-audit-v27:run:ca887c5d-d122-40fa-a320-26021494b182": {
+    "sessionId": "ca887c5d-d122-40fa-a320-26021494b182",
+    "updatedAt": 1773255600019,
+    "systemSent": true,
+    "label": "Cron: nightly-security-audit",
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>coding-agent</name>\n    <description>Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (spawn in temp dir), (3) refactoring large codebases, (4) iterative coding that needs file exploration. NOT for: simple one-liner fixes (just edit), reading code (use read tool), thread-bound ACP harness requests in chat (for example spawn/run Codex or Claude Code in a Discord thread; use sessions_spawn with runtime:&quot;acp&quot;), or any work in ~/clawd workspace (never spawn agents here). Requires a bash tool that supports pty:true.</description>\n    <location>/usr/local/lib/node_modules/openclaw/skills/coding-agent/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>/usr/local/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/usr/local/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>/usr/local/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>Agent Browser</name>\n    <description>A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands.</description>\n    <location>~/.openclaw/workspace/skills/agent-browser/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>automation-workflows</name>\n    <description>Design and implement automation workflows to save time and scale operations as a solopreneur. Use when identifying repetitive tasks to automate, building workflows across tools, setting up triggers and actions, or optimizing existing automations. Covers automation opportunity identification, workflow design, tool selection (Zapier, Make, n8n), testing, and maintenance. Trigger on &quot;automate&quot;, &quot;automation&quot;, &quot;workflow automation&quot;, &quot;save time&quot;, &quot;reduce manual work&quot;, &quot;automate my business&quot;, &quot;no-code automation&quot;.</description>\n    <location>~/.openclaw/workspace/skills/automation-workflows/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-vetter</name>\n    <description>Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns.</description>\n    <location>~/.openclaw/workspace/skills/azhua-skill-vetter/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>find-skills</name>\n    <description>Helps users discover and install agent skills when they ask questions like &quot;how do I do X&quot;, &quot;find a skill for X&quot;, &quot;is there a skill that can...&quot;, or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.</description>\n    <location>~/.openclaw/workspace/skills/find-skills/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>memory-setup</name>\n    <description>Enable and configure Moltbot/Clawdbot memory search for persistent context. Use when setting up memory, fixing &quot;goldfish brain,&quot; or helping users configure memorySearch in their config. Covers MEMORY.md, daily logs, and vector search setup.</description>\n    <location>~/.openclaw/workspace/skills/memory-setup/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>proactive-agent</name>\n    <description>Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Protocol, Working Buffer, Autonomous Crons, and battle-tested patterns. Part of the Hal Stack 🦞</description>\n    <location>~/.openclaw/workspace/skills/proactive-agent/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>qmd</name>\n    <description>Local search/indexing CLI (BM25 + vectors + rerank) with MCP mode.</description>\n    <location>~/.openclaw/workspace/skills/qmd/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>Self-Improving Agent (Proactive Self-Reflection)</name>\n    <description>Self-reflection + Self-criticism + Self-learning + Self-organizing memory. Agent evaluates its own work, catches mistakes, and improves permanently. Use before starting work and after responding to the user.</description>\n    <location>~/.openclaw/workspace/skills/self-improving/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>self-improvement</name>\n    <description>Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude (&apos;No, that&apos;s wrong...&apos;, &apos;Actually...&apos;), (3) User requests a capability that doesn&apos;t exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.</description>\n    <location>~/.openclaw/workspace/skills/self-improving-agent/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tavily</name>\n    <description>AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents.</description>\n    <location>~/.openclaw/workspace/skills/tavily-search/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>xiaohongshu</name>\n    <description>小红书全能助手 — 文案生成、封面制作、内容发布与管理。当用户要求写小红书笔记、生成小红书文案/标题/封面、发小红书、搜索小红书、评论点赞收藏等任何小红书相关操作时使用。支持一站式从文案创作到自动发布的完整流程。封面AI生图需配置可选环境变量（GEMINI_API_KEY 或 IMG_API_KEY 或 HUNYUAN_SECRET_ID+KEY）。</description>\n    <location>~/.openclaw/workspace/skills/xhs/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>RedBookSkills</name>\n    <description>将图文/视频内容自动发布到小红书（XHS）。\n支持三类任务：发布图文、发布视频、仅启动测试浏览器（不发布）。\n</description>\n    <location>~/.openclaw/workspace/skills/xiaohongshuskills/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "coding-agent",
+          "requiredEnv": []
+        },
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        },
+        {
+          "name": "Agent Browser"
+        },
+        {
+          "name": "automation-workflows"
+        },
+        {
+          "name": "skill-vetter"
+        },
+        {
+          "name": "find-skills"
+        },
+        {
+          "name": "memory-setup"
+        },
+        {
+          "name": "proactive-agent"
+        },
+        {
+          "name": "qmd"
+        },
+        {
+          "name": "Self-Improving Agent (Proactive Self-Reflection)"
+        },
+        {
+          "name": "self-improvement"
+        },
+        {
+          "name": "tavily"
+        },
+        {
+          "name": "xiaohongshu",
+          "requiredEnv": []
+        },
+        {
+          "name": "RedBookSkills"
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "coding-agent",
+          "description": "Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (spawn in temp dir), (3) refactoring large codebases, (4) iterative coding that needs file exploration. NOT for: simple one-liner fixes (just edit), reading code (use read tool), thread-bound ACP harness requests in chat (for example spawn/run Codex or Claude Code in a Discord thread; use sessions_spawn with runtime:\"acp\"), or any work in ~/clawd workspace (never spawn agents here). Requires a bash tool that supports pty:true.",
+          "filePath": "/usr/local/lib/node_modules/openclaw/skills/coding-agent/SKILL.md",
+          "baseDir": "/usr/local/lib/node_modules/openclaw/skills/coding-agent",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/usr/local/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/usr/local/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+          "filePath": "/usr/local/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/usr/local/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.",
+          "filePath": "/usr/local/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/usr/local/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "Agent Browser",
+          "description": "A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands.",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/agent-browser/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/agent-browser",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "automation-workflows",
+          "description": "Design and implement automation workflows to save time and scale operations as a solopreneur. Use when identifying repetitive tasks to automate, building workflows across tools, setting up triggers and actions, or optimizing existing automations. Covers automation opportunity identification, workflow design, tool selection (Zapier, Make, n8n), testing, and maintenance. Trigger on \"automate\", \"automation\", \"workflow automation\", \"save time\", \"reduce manual work\", \"automate my business\", \"no-code automation\".",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/automation-workflows/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/automation-workflows",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-vetter",
+          "description": "Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns.",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/azhua-skill-vetter/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/azhua-skill-vetter",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "find-skills",
+          "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/find-skills/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/find-skills",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "memory-setup",
+          "description": "Enable and configure Moltbot/Clawdbot memory search for persistent context. Use when setting up memory, fixing \"goldfish brain,\" or helping users configure memorySearch in their config. Covers MEMORY.md, daily logs, and vector search setup.",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/memory-setup/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/memory-setup",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "proactive-agent",
+          "description": "Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Protocol, Working Buffer, Autonomous Crons, and battle-tested patterns. Part of the Hal Stack 🦞",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/proactive-agent/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/proactive-agent",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "qmd",
+          "description": "Local search/indexing CLI (BM25 + vectors + rerank) with MCP mode.",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/qmd/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/qmd",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "Self-Improving Agent (Proactive Self-Reflection)",
+          "description": "Self-reflection + Self-criticism + Self-learning + Self-organizing memory. Agent evaluates its own work, catches mistakes, and improves permanently. Use before starting work and after responding to the user.",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/self-improving/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/self-improving",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "self-improvement",
+          "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/self-improving-agent/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/self-improving-agent",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tavily",
+          "description": "AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents.",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/tavily-search/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/tavily-search",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "xiaohongshu",
+          "description": "小红书全能助手 — 文案生成、封面制作、内容发布与管理。当用户要求写小红书笔记、生成小红书文案/标题/封面、发小红书、搜索小红书、评论点赞收藏等任何小红书相关操作时使用。支持一站式从文案创作到自动发布的完整流程。封面AI生图需配置可选环境变量（GEMINI_API_KEY 或 IMG_API_KEY 或 HUNYUAN_SECRET_ID+KEY）。",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/xhs/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/xhs",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        },
+        {
+          "name": "RedBookSkills",
+          "description": "将图文/视频内容自动发布到小红书（XHS）。\n支持三类任务：发布图文、发布视频、仅启动测试浏览器（不发布）。\n",
+          "filePath": "/Users/guruocen/.openclaw/workspace/skills/xiaohongshuskills/SKILL.md",
+          "baseDir": "/Users/guruocen/.openclaw/workspace/skills/xiaohongshuskills",
+          "source": "openclaw-workspace",
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "modelProvider": "bailian",
+    "model": "kimi-k2.5",
+    "contextTokens": 262144,
+    "inputTokens": 64572,
+    "outputTokens": 416,
+    "totalTokens": 13310,
+    "totalTokensFresh": true,
+    "cacheRead": 256,
+    "cacheWrite": 0
   }
 }
