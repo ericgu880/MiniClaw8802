@@ -2,8 +2,8 @@
 # 安全巡检 + Telegram 通知 Wrapper
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export TELEGRAM_BOT_TOKEN="${TELEGRAM_BOT_TOKEN:-}"
-export TELEGRAM_CHAT_ID="${TELEGRAM_CHAT_ID:-8369187343}"
+export TELEGRAM_BOT_TOKEN="8669875133:AAFwD1yebdomJr8PEZp3ijMlSHzSzosqpOw"
+export TELEGRAM_CHAT_ID="8369187343"
 
 # 先运行原巡检脚本
 /Users/guruocen/.openclaw/workspace/scripts/nightly-security-audit.sh >> /tmp/openclaw/audit-cron.log 2>&1
