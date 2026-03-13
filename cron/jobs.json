@@ -34,9 +34,9 @@
         "lastDurationMs": 249211,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "lastError": "cron announce delivery failed",
         "lastDelivered": false,
-        "lastDeliveryError": "cron announce delivery failed"
+        "lastDeliveryError": "cron announce delivery failed",
+        "runningAtMs": 1773428400013
       }
     }
   ]
