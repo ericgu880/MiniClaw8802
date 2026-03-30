@@ -7,7 +7,7 @@
       "description": "每晚安全巡检 - SlowMist v2.7",
       "enabled": true,
       "createdAtMs": 1773082800000,
-      "updatedAtMs": 1774358127767,
+      "updatedAtMs": 1774662475245,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -27,16 +27,16 @@
         "to": "8369187343"
       },
       "state": {
-        "nextRunAtMs": 1774378800000,
-        "lastRunAtMs": 1774357837258,
+        "nextRunAtMs": 1774724400000,
+        "lastRunAtMs": 1774662183105,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 290509,
+        "lastDurationMs": 292140,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false,
         "lastDeliveryError": "cron announce delivery failed",
-        "runningAtMs": 1774662183102
+        "runningAtMs": 1774876361477
       }
     }
   ]
