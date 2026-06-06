@@ -805,8 +805,8 @@
     "cacheWrite": 0
   },
   "agent:main:cron:nightly-security-audit-v27": {
-    "sessionId": "7d701a79-7741-404d-9a7b-80cca7d466be",
-    "updatedAt": 1774876361486,
+    "sessionId": "855266d5-ec63-436a-bef5-ab999ecad02a",
+    "updatedAt": 1780772400023,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -999,16 +999,16 @@
     "modelProvider": "bailian",
     "model": "kimi-k2.5",
     "contextTokens": 262144,
-    "inputTokens": 316006,
-    "outputTokens": 1537,
-    "totalTokens": 18134,
+    "inputTokens": 121976,
+    "outputTokens": 545,
+    "totalTokens": 16502,
     "totalTokensFresh": true,
-    "cacheRead": 70144,
+    "cacheRead": 7296,
     "cacheWrite": 0
   },
-  "agent:main:cron:nightly-security-audit-v27:run:97ecd7c2-406d-4f66-bc64-d4c54d6ca7e1": {
-    "sessionId": "97ecd7c2-406d-4f66-bc64-d4c54d6ca7e1",
-    "updatedAt": 1774662183111,
+  "agent:main:cron:nightly-security-audit-v27:run:27e5bc87-70fc-4c5d-9c4e-44cffaa9c6a5": {
+    "sessionId": "27e5bc87-70fc-4c5d-9c4e-44cffaa9c6a5",
+    "updatedAt": 1780707744283,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -1201,16 +1201,16 @@
     "modelProvider": "bailian",
     "model": "kimi-k2.5",
     "contextTokens": 262144,
-    "inputTokens": 316006,
-    "outputTokens": 1537,
-    "totalTokens": 18134,
+    "inputTokens": 121976,
+    "outputTokens": 545,
+    "totalTokens": 16502,
     "totalTokensFresh": true,
-    "cacheRead": 70144,
+    "cacheRead": 7296,
     "cacheWrite": 0
   },
-  "agent:main:cron:nightly-security-audit-v27:run:7d701a79-7741-404d-9a7b-80cca7d466be": {
-    "sessionId": "7d701a79-7741-404d-9a7b-80cca7d466be",
-    "updatedAt": 1774876361486,
+  "agent:main:cron:nightly-security-audit-v27:run:855266d5-ec63-436a-bef5-ab999ecad02a": {
+    "sessionId": "855266d5-ec63-436a-bef5-ab999ecad02a",
+    "updatedAt": 1780772400023,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -1403,11 +1403,11 @@
     "modelProvider": "bailian",
     "model": "kimi-k2.5",
     "contextTokens": 262144,
-    "inputTokens": 316006,
-    "outputTokens": 1537,
-    "totalTokens": 18134,
+    "inputTokens": 121976,
+    "outputTokens": 545,
+    "totalTokens": 16502,
     "totalTokensFresh": true,
-    "cacheRead": 70144,
+    "cacheRead": 7296,
     "cacheWrite": 0
   }
 }
