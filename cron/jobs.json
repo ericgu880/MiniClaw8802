@@ -7,7 +7,7 @@
       "description": "每晚安全巡检 - SlowMist v2.7",
       "enabled": true,
       "createdAtMs": 1773082800000,
-      "updatedAtMs": 1788634800601,
+      "updatedAtMs": 1788721200827,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -27,13 +27,13 @@
         "to": "8369187343"
       },
       "state": {
-        "nextRunAtMs": 1788721200000,
-        "lastRunAtMs": 1788634800018,
+        "nextRunAtMs": 1788807600000,
+        "lastRunAtMs": 1788721200039,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 583,
+        "lastDurationMs": 788,
         "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 68,
+        "consecutiveErrors": 69,
         "lastDelivered": false,
         "lastDeliveryError": "HTTP 401: invalid access token or token expired",
         "lastError": "HTTP 401: invalid access token or token expired"
