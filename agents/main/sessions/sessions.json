@@ -805,8 +805,8 @@
     "cacheWrite": 0
   },
   "agent:main:cron:nightly-security-audit-v27": {
-    "sessionId": "3c1820b6-ad19-47d1-bf65-95e77e5fe5d8",
-    "updatedAt": 1791054000032,
+    "sessionId": "999a083b-ab6b-4fad-bce9-eb69dd097897",
+    "updatedAt": 1791140400035,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
@@ -1006,9 +1006,9 @@
     "cacheRead": 7296,
     "cacheWrite": 0
   },
-  "agent:main:cron:nightly-security-audit-v27:run:3c1820b6-ad19-47d1-bf65-95e77e5fe5d8": {
-    "sessionId": "3c1820b6-ad19-47d1-bf65-95e77e5fe5d8",
-    "updatedAt": 1791054000032,
+  "agent:main:cron:nightly-security-audit-v27:run:999a083b-ab6b-4fad-bce9-eb69dd097897": {
+    "sessionId": "999a083b-ab6b-4fad-bce9-eb69dd097897",
+    "updatedAt": 1791140400035,
     "systemSent": true,
     "label": "Cron: nightly-security-audit",
     "skillsSnapshot": {
